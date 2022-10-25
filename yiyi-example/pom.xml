@@ -39,28 +39,16 @@
 
         <!-- =========================== my service end =========================== -->
 
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>${spring-cloud-version}</version>
-        </dependency>
--->
-        <dependency>
-            <groupId>com.yiyi</groupId>
-            <artifactId>yiyi-msg-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>29.0-android</version>
-            <scope>compile</scope>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>0.2.1.RELEASE</version>
         </dependency>
 
+
         <dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>nacos-config-spring-boot-starter</artifactId>
-            <version>0.2.12</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
     </dependencies>
