@@ -1,0 +1,30 @@
+server:
+    port: 18083
+spring:
+    application:
+        name: yi-example-api
+    cloud:
+
+        nacos:
+            # nacos 服务注册
+            discovery:
+              register-enabled: true
+              server-addr: 10.100.54.114:8848
+              namespace: 002447fa-1071-418d-b53d-cb5a2475f806
+            # nacos 配置
+            config:
+                server-addr: 10.100.54.114:8848
+                namespace: 002447fa-1071-418d-b53d-cb5a2475f806
+                extension-configs:
+                  # 公共配置
+                  - data-id: common.properties
+                    refresh: true
+                    group: DEFAULT_GROUP
+                  # 本项目配置
+                  - data-id: yi-example-api-qa.properties
+                    refresh: true
+                    group: DEFAULT_GROUP
+    main:
+        allow-bean-definition-overriding: true
+    profiles:
+        active: qa
